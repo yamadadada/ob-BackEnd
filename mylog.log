@@ -1,0 +1,2 @@
+2020-05-01 00:01:20.379  INFO 18628 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-01 00:01:20.490  INFO 18628 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
