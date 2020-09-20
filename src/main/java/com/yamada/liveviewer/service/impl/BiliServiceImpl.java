@@ -1,7 +1,7 @@
 package com.yamada.liveviewer.service.impl;
 
-import com.yamada.liveviewer.dao.BiliDao;
-import com.yamada.liveviewer.dao.LogDao;
+import com.yamada.liveviewer.dao.liveviewer.BiliDao;
+import com.yamada.liveviewer.dao.liveviewer.LogDao;
 import com.yamada.liveviewer.pojo.BiliData;
 import com.yamada.liveviewer.pojo.BiliUser;
 import com.yamada.liveviewer.pojo.Log;

@@ -1,6 +1,6 @@
 package com.yamada.liveviewer.service.impl;
 
-import com.yamada.liveviewer.dao.SummaryDao;
+import com.yamada.liveviewer.dao.liveviewer.SummaryDao;
 import com.yamada.liveviewer.pojo.Summary;
 import com.yamada.liveviewer.service.HomeService;
 import org.springframework.stereotype.Service;

@@ -38,7 +38,7 @@ public class ResultUtil {
      * @param message
      * @return
      */
-    public static ResponseEntity<Object> error(Integer code,  String message) {
+    public static ResponseEntity<Object> error(Integer code, String message) {
         ResultVO resultVO = new ResultVO();
         resultVO.setCode(code);
         resultVO.setMessage(message);

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/bili")
-@CrossOrigin(origins = "http://127.0.0.1")
+@CrossOrigin(origins = "http://111.230.220.64")
 public class BiliController {
 
     private final BiliService biliService;

@@ -1,4 +1,4 @@
-package com.yamada.liveviewer.dao;
+package com.yamada.liveviewer.dao.liveviewer;
 
 import com.yamada.liveviewer.vo.GameVO;
 import org.apache.ibatis.annotations.Mapper;

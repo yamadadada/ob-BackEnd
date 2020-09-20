@@ -1,7 +1,7 @@
 package com.yamada.liveviewer.service.impl;
 
-import com.yamada.liveviewer.dao.GameDao;
-import com.yamada.liveviewer.dao.ResultDao;
+import com.yamada.liveviewer.dao.liveviewer.GameDao;
+import com.yamada.liveviewer.dao.liveviewer.ResultDao;
 import com.yamada.liveviewer.pojo.Result;
 import com.yamada.liveviewer.service.GameService;
 import com.yamada.liveviewer.vo.GameDetailVO;

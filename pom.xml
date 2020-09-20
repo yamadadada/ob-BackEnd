@@ -45,20 +45,19 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.drtrang</groupId>
-            <artifactId>druid-spring-boot2-starter</artifactId>
-            <version>1.1.10</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.github.drtrang</groupId>-->
+<!--            <artifactId>druid-spring-boot2-starter</artifactId>-->
+<!--            <version>1.1.10</version>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>com.github.drtrang</groupId>
-            <artifactId>druid-spring-boot2-actuator-starter</artifactId>
-            <version>1.1.10</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.github.drtrang</groupId>-->
+<!--            <artifactId>druid-spring-boot2-actuator-starter</artifactId>-->
+<!--            <version>1.1.10</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
