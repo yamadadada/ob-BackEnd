@@ -3,6 +3,8 @@ package com.yamada.liveviewer.service.impl;
 import com.yamada.liveviewer.dao.liveviewer.SummaryDao;
 import com.yamada.liveviewer.pojo.Summary;
 import com.yamada.liveviewer.service.HomeService;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,6 +18,7 @@ public class HomeServiceImpl implements HomeService {
     private SummaryDao summaryDao;
 
     @Override
+    @Cacheable(value = "overview")
     public Object overview() {
         List<Summary> summaryList = summaryDao.getReal24HoursTotal();
         Map<String, Object> map = new HashMap<>();
@@ -48,5 +51,11 @@ public class HomeServiceImpl implements HomeService {
         map.put("dayRate", dayRate);
         map.put("weekRate", weekRate);
         return map;
+    }
+
+    @Override
+    @CacheEvict(value = "overview", allEntries = true)
+    public void deleteOverview() {
+        System.out.println("删除首页概要缓存");
     }
 }

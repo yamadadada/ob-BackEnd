@@ -7,7 +7,9 @@ import java.util.List;
 
 public interface GameService {
 
-    List<GameVO> getRank();
+    List<GameVO> getRank(int page);
 
     GameDetailVO getDetailByGid(Integer gid);
+
+    void deleteGameRank();
 }

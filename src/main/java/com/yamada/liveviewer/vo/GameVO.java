@@ -2,8 +2,10 @@ package com.yamada.liveviewer.vo;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class GameVO {
+public class GameVO implements Serializable {
 
     private Integer gid;
 

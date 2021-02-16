@@ -25,7 +25,7 @@ public class GameController {
                        @RequestParam(value = "size", defaultValue = "30") int size) {
         Map<String, Object> map = new HashMap<>();
         PageHelper.startPage(page, size);
-        List<GameVO> gameVOList = gameService.getRank();
+        List<GameVO> gameVOList = gameService.getRank(page);
         PageInfo<GameVO> pageInfo = new PageInfo<>(gameVOList);
 
         map.put("gameVOList", gameVOList);

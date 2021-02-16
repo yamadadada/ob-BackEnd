@@ -6,6 +6,8 @@ import com.yamada.liveviewer.pojo.Result;
 import com.yamada.liveviewer.service.GameService;
 import com.yamada.liveviewer.vo.GameDetailVO;
 import com.yamada.liveviewer.vo.GameVO;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -25,13 +27,13 @@ public class GameServiceImpl implements GameService {
     private ResultDao resultDao;
 
     @Override
-    public List<GameVO> getRank() {
+    @Cacheable(value = "gameRank", key = "#page")
+    public List<GameVO> getRank(int page) {
         List<GameVO> gameVOList = gameDao.getGameRank();
         for (GameVO gameVO : gameVOList) {
-            String huyaList = gameVO.getHuya();
-            if (!StringUtils.isEmpty(huyaList)) {
-                String huyaId = huyaList.split(",")[0];
-                gameVO.setHuya("https://huyaimg.msstatic.com/cdnimage/game/" + huyaId + "-S.jpg");
+            String huya = gameVO.getHuya();
+            if (!StringUtils.isEmpty(huya)) {
+                gameVO.setHuya("https://images.weserv.nl/?url=" + huya);
             }
         }
         return gameVOList;
@@ -77,5 +79,11 @@ public class GameServiceImpl implements GameService {
         gameDetailVO.setDayX(dayX);
         gameDetailVO.setDayY(dayY);
         return gameDetailVO;
+    }
+
+    @Override
+    @CacheEvict(value = "gameRank", allEntries = true)
+    public void deleteGameRank() {
+        System.out.println("删除所有游戏排名");
     }
 }
